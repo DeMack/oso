@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-thread',
-  templateUrl: './thread.component.html',
-  styleUrls: ['./thread.component.css']
+  selector: 'oso-thread',
+  templateUrl: '../html/thread.component.html',
+  styleUrls: ['../styles/thread.component.css']
 })
 export class ThreadComponent implements OnInit {
 
