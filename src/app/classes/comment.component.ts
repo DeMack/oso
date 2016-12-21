@@ -14,7 +14,7 @@ export class CommentComponent implements OnInit {
       parentUid: null,
       topic: 'First Test',
       poster: 'tester',
-      comment: 'This is a test'
+      comment: 'You\'re a douche! :)'
   };
 
   constructor() { }
