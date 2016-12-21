@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
+    "paths": {
+      "models/*": [
+        "app/models/*"
+      ],
+      "services/*": [
+        "app/services/*"
+      ],
+      "ts/*": [
+        "app/ts/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
