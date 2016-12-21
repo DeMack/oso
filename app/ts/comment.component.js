@@ -14,6 +14,7 @@ let CommentComponent = class CommentComponent {
         this.comment = {
             uid: 1,
             parentUid: null,
+            topic: 'First Test',
             poster: 'tester',
             comment: 'This is a test'
         };
