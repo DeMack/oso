@@ -3,16 +3,24 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
+
 import { AppComponent } from './app.component';
+import { CommentComponent } from './classes/comment.component';
+import { ThreadComponent } from './classes/thread.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommentComponent,
+    ThreadComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [],
   bootstrap: [AppComponent]
