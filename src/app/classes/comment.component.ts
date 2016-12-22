@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import {TreeNode} from 'primeng/primeng';
+
 import {Opinion} from '../models/opinion';
+import {OpinionFetcherService} from '../services/opinion-fetcher.service';
 
 @Component({
   selector: 'oso-comment',
@@ -9,17 +12,12 @@ import {Opinion} from '../models/opinion';
 })
 export class CommentComponent implements OnInit {
 
-  comment: Opinion = {
-      uid: 1,
-      parentUid: null,
-      topic: 'First Test',
-      poster: 'tester',
-      comment: 'You\'re a douche! :)'
-  };
+  comments: TreeNode[];
 
-  constructor() { }
+  constructor(private opinionFetcherService: OpinionFetcherService) { }
 
   ngOnInit() {
+    this.opinionFetcherService.getComments().then(comments => this.comments = comments);
   }
 
 }

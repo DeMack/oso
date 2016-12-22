@@ -1,2 +1,5 @@
-<h2>{{comment.poster}}</h2>
-<div>{{comment.comment}}</div>
+<p-treeTable [value]="comments">
+    <header>Test Display</header>
+    <p-column field="poster" header="Poster" ></p-column>
+    <p-column field="comment" header="Comment" ></p-column>
+</p-treeTable>
