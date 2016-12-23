@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Headers, Http} from '@angular/http';
 
-import {TreeNode} from 'primeng/primeng';
-
 import 'rxjs/add/operator/toPromise';
+
+import {Opinion} from '../models/opinion';
 
 @Injectable()
 export class OpinionFetcherService {
@@ -12,9 +12,9 @@ export class OpinionFetcherService {
 
   constructor(private http: Http) { }
 
-  getComments(): Promise<TreeNode[]> {
+  getComments(): Promise<Opinion[]> {
     return this.http.get(this.commentsUrl).toPromise()
-      .then(res => <TreeNode[]> res.json().data)
+      .then(res => <Opinion[]> res.json().data)
       .then(data => { return data; })
       .catch(this.handleError);
   }

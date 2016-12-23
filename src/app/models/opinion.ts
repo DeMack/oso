@@ -4,4 +4,5 @@ export class Opinion {
     topic: string;
     poster: string;
     comment: string;
+    children: Opinion[];
 }

@@ -6,26 +6,28 @@ import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 
-import { TreeTableModule, SharedModule, TreeNode } from 'primeng/primeng';
-
 import { AppComponent } from './app.component';
 import { CommentComponent } from './classes/comment.component';
 import { ThreadComponent } from './classes/thread.component';
+import { OsoTableComponent } from './classes/oso-table.component';
 
 import { OpinionFetcherService } from './services/opinion-fetcher.service';
+import { OsoTreeComponent } from './classes/oso-tree.component';
+import { OsoTreeBranchComponent } from './classes/oso-tree-branch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentComponent,
     ThreadComponent,
+    OsoTableComponent,
+    OsoTreeComponent,
+    OsoTreeBranchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    TreeTableModule,
-    SharedModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [OpinionFetcherService],
