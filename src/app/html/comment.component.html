@@ -1,1 +1,22 @@
-<oso-tree [cols]="cols" [items]="treeNodes"></oso-tree>
+<div>
+    <h3>{{opinion.topic}}</h3>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Poster</td>
+                    <td>Comment</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{opinion.poster}}</td>
+                    <td>{{opinion.comment}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="opinion.children">
+            <oso-comment *ngFor="let child of opinion.children" [opinion]="child"></oso-comment>
+        </div>
+    </div>
+</div>

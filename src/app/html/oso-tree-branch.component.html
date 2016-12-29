@@ -1,4 +1,0 @@
-<tr class="oso-tree-row">
-  <td *ngFor="let col of cols">{{node.details[col.field]}}</td>
-  <oso-tree-branch *ngFor="let child of node.children" [cols]="cols" [node]="child"></oso-tree-branch>
-</tr>
