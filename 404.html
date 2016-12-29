@@ -2,13 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Open Sources Opinions</title>
+  <title>Open Source Opinions</title>
   <base href="/oso/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link href="styles.dd38ec1344c3794c6f50.bundle.css" rel="stylesheet"></head>
+  <script>
+    // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+<link href="styles.16050341f2c956fc0be8.bundle.css" rel="stylesheet"></head>
 <body>
   <oso-root>Loading...</oso-root>
-<script type="text/javascript" src="inline.e32f223862ec593582d5.bundle.js"></script><script type="text/javascript" src="main.864c52de56605e0d7c26.bundle.js"></script></body>
+<script type="text/javascript" src="inline.087d81f419edf2d3b965.bundle.js"></script><script type="text/javascript" src="main.b93f2e0ee9a4d9a336a1.bundle.js"></script></body>
 </html>
